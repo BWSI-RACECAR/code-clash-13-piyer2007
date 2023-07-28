@@ -52,10 +52,10 @@ class Solution:
                         num = prices[j+1]
                         index = j+1
                         break
-                if num-i > 0:
+                if num-prices[i] > 0:
                     sum += num-prices[i]
                 else:
-                    i = index+1
+                    i = index
             return sum
 
 def main():
