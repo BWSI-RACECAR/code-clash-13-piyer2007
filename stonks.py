@@ -53,7 +53,7 @@ class Solution:
                         index = j+1
                         break
                 if num-i > 0:
-                    sum += num-price[i]
+                    sum += num-prices[i]
                 else:
                     i = index+1
             return sum
