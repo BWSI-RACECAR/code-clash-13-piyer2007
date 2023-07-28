@@ -45,6 +45,7 @@ class Solution:
             #TODO: Write code below to returnn an int with the solution to the prompt.
             print(prices)
             sum = 0
+            i = 0
             while(i < (len(prices))):
                 num = 0
                 index = i
