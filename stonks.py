@@ -50,11 +50,11 @@ class Solution:
                 index = i
                 for j in range(i, len(prices)-1):
                     if prices[j+1] < prices[j]:
-                        num = prices[j+1]
+                        num = prices[j]
                         index = j+1
                         break
                 if num-prices[i] > 0:
-                    sum += num-prices[i]
+                    sum += (num-prices[i])
                 else:
                     i = index
             return sum
