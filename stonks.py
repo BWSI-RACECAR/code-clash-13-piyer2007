@@ -43,6 +43,7 @@ class Solution:
             #return type: int
 
             #TODO: Write code below to returnn an int with the solution to the prompt.
+            print(prices)
             sum = 0
             for i in range(len(prices)):
                 num = 0
