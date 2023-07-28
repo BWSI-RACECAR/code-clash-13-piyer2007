@@ -56,6 +56,7 @@ class Solution:
                         break
                 if num-prices[i] > 0:
                     sum += (num-prices[i])
+                    i += 1
                 else:
                     i = index
             return sum
