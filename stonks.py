@@ -43,20 +43,18 @@ class Solution:
             #return type: int
 
             #TODO: Write code below to returnn an int with the solution to the prompt.
-            print(prices)
-            sum = 0
-            for i in range(len(prices)):
-                num = 0
-                index = i
-                for j in range(i, len(prices)-1):
-                    if prices[j+1] < prices[j]:
-                        num = prices[j]
-                        index = j+1
-                        break
-                if num-prices[i] > 0:
-                    sum += (num-prices[i])
-                i = index
-            return sum
+            if not prices or len(prices) < 2:
+                return 0
+                buy1 = float('inf')
+                buy2 = float('inf')
+                profit1 = 0
+                profit2 = 0
+            for price in prices:
+                buy1 = min(buy1, price)
+                profit1 = max(profit1, price - buy1)
+                buy2 = min(buy2, price - profit1)
+                profit2 = max(profit2, price - buy2)
+            return profit2
 
 def main():
     array = input().split(" ")
