@@ -45,10 +45,10 @@ class Solution:
             #TODO: Write code below to returnn an int with the solution to the prompt.
             if not prices or len(prices) < 2:
                 return 0
-                buy1 = float('inf')
-                buy2 = float('inf')
-                profit1 = 0
-                profit2 = 0
+            buy1 = float('inf')
+            buy2 = float('inf')
+            profit1 = 0
+            profit2 = 0
             for price in prices:
                 buy1 = min(buy1, price)
                 profit1 = max(profit1, price - buy1)
